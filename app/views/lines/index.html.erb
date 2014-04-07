@@ -1,13 +1,13 @@
-<% content_for(:title, "All Stations | Trimet") %>
+<% content_for(:title, "All Lines | Trimet") %>
 
-<h1>Stations</h1>
+<h1>Lines</h1>
 
 <ul>
-  <% @stations.each do |station| %>
-      <br /><a href="/stations/<%= station.id %>"><%= station.name %></a>
+  <% @lines.each do |line| %>
+    <li><%= link_to "#{line.name}", line_path(line) %>
       </li>
   <% end %>
 </ul>
 
 
-<p><a href="/stations/new">Add a new Station</a></p>
+<%= link_to "New Line", new_line_path, :class=> "btn btn-success" %>
