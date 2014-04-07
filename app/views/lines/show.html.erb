@@ -1,0 +1,10 @@
+<% content_for(:title, "#{@line.name} | Trimet") %>
+
+<h1> <%= @line.name %> </h1>
+
+<%= link_to "Line Menu", lines_path, :class=> "btn btn-primary" %>
+<%= link_to "Edit Line", edit_line_path, :class=> "btn btn-warning" %>
+<%= link_to "Delete", line_path(@line),
+                      :confirm => "You sure?",
+                      :method => "delete",
+                      :class => "btn btn-danger" %>

@@ -1,0 +1,13 @@
+<% content_for(:title, "All Lines | Trimet") %>
+
+<h1>Lines</h1>
+
+<ul>
+  <% @lines.each do |line| %>
+    <li><%= link_to "#{line.name}", Line_path(Line) %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "New Line", new_line_path, :class=> "btn btn-success" %>

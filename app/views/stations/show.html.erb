@@ -1,0 +1,10 @@
+<% content_for(:title, "#{@station.name} | Trimet") %>
+
+<h1> <%= @station.name %> </h1>
+
+<%= link_to "Station Menu", stations_path, :class=> "btn btn-primary" %>
+<%= link_to "Edit Station", edit_station_path, :class=> "btn btn-warning" %>
+<%= link_to "Delete", station_path(@station),
+                      :confirm => "You sure?",
+                      :method => "delete",
+                      :class => "btn btn-danger" %>
