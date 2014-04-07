@@ -1,9 +1,10 @@
 <% content_for(:title, "#{@line.name} | Trimet") %>
 
 <h1> <%= @line.name %> </h1>
+  <h3>Stations on this line</h3>
   <ul>
   <% @line.stations.each do |station| %>
-      <li><%= station.name %></li>
+      <li><%= link_to "#{station.name}", station_path(station) %></li>
   <% end %>
   </ul>
 <%= link_to "Line Menu", lines_path, :class=> "btn btn-primary" %>

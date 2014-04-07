@@ -7,7 +7,7 @@
   <div class='form-group'>
     <% @stations.each do |station| %>
       <%= check_box_tag("station_ids[]", station.id) %>
-      <%= label_tag("#{station.name}") %>
+      <%= label_tag(:station_name, "#{station.name}") %> </br>
     <% end %>
   </div>
 
