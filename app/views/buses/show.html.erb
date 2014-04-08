@@ -1,0 +1,12 @@
+<% content_for(:title, "#{@bus.name} | Trimet") %>
+
+<h1> <%= @bus.name %> </h1>
+
+<p><%= @bus.line.name %></p>
+
+<%= link_to "Home", stations_path, :class=> "btn btn-primary" %>
+<%= link_to "Edit Bus", edit_bus_path, :class=> "btn btn-warning" %>
+<%= link_to "Delete", bus_path(@bus),
+                      :confirm => "You sure?",
+                      :method => "delete",
+                      :class => "btn btn-danger" %>

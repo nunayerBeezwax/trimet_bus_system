@@ -7,6 +7,13 @@
       <li><%= link_to "#{station.name}", station_path(station) %></li>
   <% end %>
   </ul>
+  <h3>Buses on this line</h3>
+  <ul>
+  <% @line.buses.each do |bus| %>
+    <li><%= link_to "#{bus.name}", bus_path(bus) %></li>
+  <% end %>
+  </ul>
+
 <%= link_to "Line Menu", lines_path, :class=> "btn btn-primary" %>
 <%= link_to "Edit Line", edit_line_path, :class=> "btn btn-warning" %>
 <%= link_to "Delete", line_path(@line),

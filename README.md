@@ -8,7 +8,7 @@ Bus timetable
 
 -DONE- As a bus rider, I want to view a bus station, so that I can see which buses come to it.
 
-As a bus system operator, I want to add buses to a line, so that I can assign each physical bus to a particular line.
+-DONE- As a bus system operator, I want to add buses to a line, so that I can assign each physical bus to a particular line.
 
 As a bus systems operator, I want to note what time a bus is scheduled to arrive at each stop, so that I can tell my drivers when they should be where.
 

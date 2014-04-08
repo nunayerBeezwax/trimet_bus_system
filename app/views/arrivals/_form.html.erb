@@ -1,0 +1,13 @@
+<%= form_for [@bus, @arrival] do |f| %>
+  <div class='form-group'>
+    <%= f.hidden_field(:bus_id, :value => @bus.id) %>
+    <ul>
+    <% @bus.line.stops.each do |stop| %>
+      <%= f.hidden_field(:stop_id, :multiple=> true, :value => stop.id) %>
+      <li><%= f.label Station.find(stop.station_id).name %>
+      <%= f.time_field(:time, :multiple=> true) %></li>
+    <% end %>
+  </ul>
+  </div>
+    <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

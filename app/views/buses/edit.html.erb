@@ -1,0 +1,9 @@
+<% content_for(:title, "#{@bus.name} | Edit menu") %>
+
+<h1>Edit Menu </h1>
+
+<%= render('layouts/errors', object: @bus) %>
+  <%= render('form') %>
+
+<br>
+<%= link_to "Add Arrival Time", new_bus_arrival_path(@bus), :class=> "btn btn-info" %>
