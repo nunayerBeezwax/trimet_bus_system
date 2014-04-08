@@ -6,10 +6,11 @@ class ArrivalsController < ApplicationController
   end
 
   def create
-    params[:arrival][:time].each do |time|
-      params[:arrival][:stop_id].each do |stop_id|
-        Arrival.create(:bus_id => params[:bus_id], :stop_id => stop_id, :time => time)
-    flash[:notice] = "#{@arrival.stop_id} has been added"
+    i = 0
+    params[:arrival][:time].count.times do
+      Arrival.create(:bus_id => params[:arrival][:bus_id], :stop_id => params[:arrival][:stop_id][i], :time => params[:arrival][:time][i])
+      i += 1
+    end
     redirect_to "/"
   end
 
